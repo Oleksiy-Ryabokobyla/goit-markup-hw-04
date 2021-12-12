@@ -10,6 +10,8 @@
   --header-underline-color: #ececec;
   --card-border-color: #eeeeee;
   --card-set-gap: 30px;
+  --grey-icon-color: #afb1b8;
+  --footer-socials-bgc: rgba(255, 255, 255, 0.1);
 }
 body {
   font-family: "Roboto", "Arial", sans-serif;
@@ -59,13 +61,7 @@ img {
   display: flex;
   align-items: center;
 }
-.contacts-list {
-  display: flex;
-  flex-wrap: wrap;
-}
-.contacts-item:last-child {
-  margin-left: 50px;
-}
+
 .logo {
   color: var(--solid-black-color);
   font-family: "Raleway", "Arial", sans-serif;
@@ -102,6 +98,17 @@ img {
 .nav-link.current {
   color: var(--brand-color);
 }
+.contacts-list {
+  display: flex;
+}
+
+.contacts-item:last-child {
+  margin-left: 50px;
+}
+.contacts-icon {
+  fill: currentColor;
+  margin-right: 10px;
+}
 .contacts-link {
   font-size: 14px;
   font-weight: 500;
@@ -109,6 +116,8 @@ img {
   color: inherit;
   letter-spacing: 0.02em;
   text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 .contacts-link:hover,
 .contacts-link:focus {
@@ -117,8 +126,17 @@ img {
 /* main content section */
 /* hero section */
 .hero {
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 1600px;
   background-color: var(--secondary-background-color);
   padding: 200px 0;
+  margin: 0 auto;
 }
 .hero-content {
   width: 700px;
@@ -159,6 +177,15 @@ img {
   width: 1px;
   height: 1px;
   margin: -1px;
+}
+.benefits-thumb {
+  background-color: var(--light-background-color);
+  border-radius: 4px;
+  height: 120px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .benefits-list {
   display: flex;
@@ -204,10 +231,23 @@ img {
 .team {
   background-color: var(--light-background-color);
 }
+.team-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+.team-cards-item {
+  box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 1px 0px #00000024,
+    0px 1px 3px 0px #0000001f;
+}
+.team-cards-item:not(:last-child) {
+  margin-right: 30px;
+}
 .member-info {
   background-color: var(--main-white-color);
   padding-top: 30px;
   padding-bottom: 30px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
 }
 .team-title {
   color: var(--title-color);
@@ -216,14 +256,6 @@ img {
   line-height: 1.2;
   text-align: center;
   margin-bottom: 50px;
-}
-.team-cards {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.team-cards-item:not(:last-child) {
-  margin-right: 30px;
 }
 .team-subtitle {
   color: var(--title-color);
@@ -237,11 +269,95 @@ img {
   font-size: 16px;
   line-height: 1.2;
   text-align: center;
+  margin-bottom: 16px;
+}
+.team-socials-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.team-socials-item {
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.team-socials-item:hover,
+.team-socials-item:focus {
+  background-color: var(--brand-color);
+  cursor: pointer;
+}
+.team-socials-item:not(:last-child) {
+  margin-right: 10px;
+}
+.team-socials-icon {
+  fill: var(--grey-icon-color);
+  display: block;
+}
+.team-socials-item:hover .team-socials-icon,
+.team-socials-item:focus .team-socials-icon {
+  fill: var(--main-white-color);
+}
+/* our clients */
+.clients-section {
+  padding: 69px 0 94px;
+}
+.clients-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: var(--solid-black-color);
+  letter-spacing: 0.03em;
+  line-height: 42px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.clients-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clients-item {
+  width: 170px;
+  height: 92px;
+}
+.clients-item:not(:last-child) {
+  margin-right: 30px;
+}
+.clients-link {
+  width: 100%;
+  height: 100%;
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--grey-icon-color);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clients-link:hover,
+.clients-link:focus {
+  border-color: var(--brand-color);
+}
+.clients-icon {
+  fill: var(--grey-icon-color);
+}
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
+  fill: var(--brand-color);
 }
 /* footer */
 .footer {
   background-color: var(--secondary-background-color);
   padding: 60px 0;
+}
+.footer > .container {
+  display: flex;
+  align-items: baseline;
+}
+.footer-left-part {
+  margin-right: 70px;
 }
 .footer-logo {
   font-family: "Raleway", "Arial", sans-serif;
@@ -277,6 +393,43 @@ img {
 .footer-address-item:not(:last-child) {
   margin-bottom: 9px;
 }
+.footer-socials-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--main-white-color);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.footer-socials-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-socials-item {
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--footer-socials-bgc);
+}
+.footer-socials-item:hover,
+.footer-socials-item:focus {
+  background-color: var(--brand-color);
+  cursor: pointer;
+}
+.footer-socials-item:not(:last-child) {
+  margin-right: 10px;
+}
+.footer-socials-icon {
+  fill: var(--main-white-color);
+  display: block;
+}
+.footer-socials-item:hover .footer-socials-icon,
+.footer-socials-item:focus .footer-socials-icon {
+  fill: var(--main-white-color);
+}
 /* ======================= portfolio.html main section styles ================================ */
 .filter {
   display: flex;
@@ -304,6 +457,8 @@ img {
   cursor: pointer;
   color: var(--main-white-color);
   background-color: var(--brand-color);
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
 .filter {
   margin-bottom: 50px;
@@ -330,6 +485,12 @@ img {
 .project-link {
   text-decoration: none;
   color: inherit;
+  display: block;
+}
+.project-link:hover,
+.project-link:focus {
+  box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
 }
 
 .project-name {
