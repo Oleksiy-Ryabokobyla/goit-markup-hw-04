@@ -280,21 +280,23 @@ img {
   width: 44px;
   height: 44px;
   border-radius: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .team-socials-item:hover,
 .team-socials-item:focus {
   background-color: var(--brand-color);
-  cursor: pointer;
 }
 .team-socials-item:not(:last-child) {
   margin-right: 10px;
 }
+.team-socials-link {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
 .team-socials-icon {
   fill: var(--grey-icon-color);
-  display: block;
 }
 .team-socials-item:hover .team-socials-icon,
 .team-socials-item:focus .team-socials-icon {
@@ -409,22 +411,24 @@ img {
   width: 44px;
   height: 44px;
   border-radius: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: var(--footer-socials-bgc);
 }
 .footer-socials-item:hover,
 .footer-socials-item:focus {
   background-color: var(--brand-color);
-  cursor: pointer;
 }
 .footer-socials-item:not(:last-child) {
   margin-right: 10px;
 }
+.footer-socials-link {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
 .footer-socials-icon {
   fill: var(--main-white-color);
-  display: block;
 }
 .footer-socials-item:hover .footer-socials-icon,
 .footer-socials-item:focus .footer-socials-icon {
